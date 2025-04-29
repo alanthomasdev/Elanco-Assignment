@@ -1,11 +1,17 @@
 import express from 'express';
-import { getCountries, getCountryByCode, filterCountriesByRegion, searchCountries } from '../controllers/countryController';
+import {
+  getCountries,
+  getCountryByCode,
+  filterCountriesByRegion,
+  searchCountries,
+} from '../controllers/countryController';
 
 const router = express.Router();
 
-router.get('/', getCountries);
-router.get('/:code', getCountryByCode);
-router.get('/region/:region', filterCountriesByRegion);
+// More specific routes should come first
 router.get('/search', searchCountries);
+router.get('/region/:region', filterCountriesByRegion);
+router.get('/:code', getCountryByCode);
+router.get('/', getCountries);
 
 export default router;

@@ -1,8 +1,11 @@
-import { expect, test } from 'vitest'
-import { render, screen } from '@testing-library/react'
-import Home from '../pages'
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { describe, test, expect } from 'vitest';
+import Home from '../pages/index';
 
-test('renders loading state while fetching data', async () => {
-  render(<Home />)
-  expect(screen.getByText(/loading/i))
-})
+describe('Home page', () => {
+  test('renders loading state while fetching data', () => {
+    render(<Home />);
+    expect(screen.getByText(/loading/i)).toBeInTheDocument();
+  });
+});
