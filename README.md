@@ -15,12 +15,12 @@ This is a React-based frontend built with **Next.js**, styled using **Tailwind C
 - Node.js (v14.x or higher)
 - npm or yarn or pnp
 
-## Installation: 
+## Installation
 
 npm run test
 
 
-## Run in the local :
+## Run in the local 
 
   npm run dev
 
